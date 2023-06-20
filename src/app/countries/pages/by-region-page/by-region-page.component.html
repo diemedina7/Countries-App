@@ -1,0 +1,20 @@
+<h2>Por región</h2>
+<hr>
+
+<div class="row">
+  <div class="col text-center">
+    <!-- buttonList -->
+    <button (click)="searchByRegion(region);" *ngFor="let region of regions" class="btn mx-2" [ngClass]="{ 'btn-outline-primary' : selectedRegion === region }">
+      {{ region }}
+    </button>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- result table -->
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
